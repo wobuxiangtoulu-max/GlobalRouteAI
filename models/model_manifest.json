@@ -1,0 +1,16 @@
+{
+  "trained_at_utc": "2026-10-05T01:17:56.790967+00:00",
+  "test_start_date": "2026-05-23",
+  "selection_metric": "pr_auc",
+  "best_available_model": "logistic_regression",
+  "available_models": [
+    "logistic_regression",
+    "random_forest",
+    "catboost"
+  ],
+  "skipped_models": {},
+  "dataset_rows": 12000,
+  "train_rows": 9591,
+  "test_rows": 2409,
+  "simulated_data": true
+}
