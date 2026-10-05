@@ -1,0 +1,28 @@
+column,type,description,prediction_use
+shipment_id,string,Unique simulated shipment identifier,No
+ship_date,date,Dispatch date,Yes
+promised_delivery_date,date,Contractual delivery date,No; derived from promised_days
+delivery_date,date,Actual delivery date,No; outcome leakage
+carrier,category,Selected logistics carrier,Yes
+origin,category,Origin city,Yes
+destination,category,Destination city,Yes
+route,category,Origin-destination pair,Yes
+service_level,category,"Economy, Standard, or Express",Yes
+package_weight_kg,number,Physical package weight in kilograms,Yes
+package_volume_cm3,number,Package volume in cubic centimetres,Yes
+order_value_eur,number,Declared order value in euros,Yes
+fragile,0/1,Fragile handling indicator,Yes
+pickup_hour,integer,Planned pickup hour,Yes
+distance_km,integer,Estimated route distance,Yes
+warehouse_load_pct,number,Warehouse utilisation when dispatched,Yes
+carrier_recent_on_time_rate,rate,Carrier trailing on-time performance available at dispatch,Yes
+weather_severity,0-3,Forecast disruption severity,Yes
+holiday_period,0/1,Peak holiday-period indicator,Yes
+shipping_cost,EUR,Quoted shipping cost,Yes
+promised_days,integer,Promised transit time,Yes
+transit_days,integer,Actual transit time,No; outcome
+delay_days,integer,Days delivered after promise,No; outcome
+is_delayed,0/1,Training label: actual delivery later than promise,Target
+delay_reason,category,Observed reason when delayed,No; outcome
+status,category,Final shipment status,No; outcome
+data_source,string,Explicit simulated-data marker,No
